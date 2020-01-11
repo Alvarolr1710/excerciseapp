@@ -1,4 +1,4 @@
-package readingList.errorhandler;
+package readinglist.errorhandler;
 
 import org.springframework.boot.web.servlet.error.DefaultErrorAttributes;
 import org.springframework.stereotype.Component;

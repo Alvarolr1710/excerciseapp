@@ -1,4 +1,4 @@
-package readingList.utils;
+package readinglist.utils;
 
 import javax.persistence.*;
 

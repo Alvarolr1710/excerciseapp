@@ -1,4 +1,4 @@
-package readingList.controller;
+package readinglist.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -6,10 +6,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import readingList.amazon.AmazonProperties;
-import readingList.repository.ReadingListRepository;
-import readingList.utils.Book;
-import readingList.utils.Reader;
+import readinglist.amazon.AmazonProperties;
+import readinglist.repository.ReadingListRepository;
+import readinglist.utils.Book;
+import readinglist.utils.Reader;
 
 import java.util.List;
 

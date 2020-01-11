@@ -1,9 +1,9 @@
-package readingList.repository;
+package readinglist.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import readingList.utils.Book;
-import readingList.utils.Reader;
+import readinglist.utils.Book;
+import readinglist.utils.Reader;
 
 import java.util.List;
 

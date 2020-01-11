@@ -1,4 +1,4 @@
-package readingList.amazon;
+package readinglist.amazon;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

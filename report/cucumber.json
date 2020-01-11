@@ -1,0 +1,83 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-01-11T16:41:38.334Z",
+        "line": 3,
+        "name": "Add new book to log user",
+        "description": "",
+        "id": "reading-list-functionality-end-to-end;add-new-book-to-log-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"*[name\u003d\u0027username\u0027]\"}\n  (Session info: chrome\u003d79.0.3945.88)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027LAPTOP-8F2SOL2E\u0027, ip: \u0027192.168.86.116\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027x86\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_231\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\\Users\\alvar\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54273}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 661c5395b722faddb4b82f4df57317b6\n*** Element info: {Using\u003dname, value\u003dusername}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)\r\n\tat org.openqa.selenium.By$ByName.findElement(By.java:284)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat readinglist.webdriverfuctions.PageFunctions.findAnyElementByName(PageFunctions.java:13)\r\n\tat readinglist.glue.ReadingListStepDefinitions.logToUser(ReadingListStepDefinitions.java:44)\r\n\tat ✽.I have log to the read list portal as Alvaro(file:///C:/Users/alvar/Workspace/excerciseapp/src/test/resources/features/readingList.feature:4)\r\n",
+              "duration": 13567000000,
+              "status": "failed"
+            },
+            "line": 4,
+            "name": "I have log to the read list portal as Alvaro",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Alvaro",
+                  "offset": 38
+                }
+              ],
+              "location": "readinglist.glue.ReadingListStepDefinitions.\u003cinit\u003e(ReadingListStepDefinitions.java:31)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "I add the book with the following specifications",
+            "match": {
+              "location": "readinglist.glue.ReadingListStepDefinitions.\u003cinit\u003e(ReadingListStepDefinitions.java:36)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Book Title",
+                  "Book Author",
+                  "ISBN",
+                  "Description"
+                ]
+              },
+              {
+                "cells": [
+                  "Spring Boot in Action",
+                  "Craig Walls",
+                  "9781617292545",
+                  "Book to learn about spring boot"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "I should see the book added to my books list",
+            "match": {
+              "location": "readinglist.glue.ReadingListStepDefinitions.\u003cinit\u003e(ReadingListStepDefinitions.java:39)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "reading list functionality end to end",
+    "description": "",
+    "id": "reading-list-functionality-end-to-end",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/readingList.feature",
+    "tags": []
+  }
+]

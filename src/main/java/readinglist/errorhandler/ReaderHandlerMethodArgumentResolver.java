@@ -1,4 +1,4 @@
-package readingList.errorhandler;
+package readinglist.errorhandler;
 
 import org.springframework.core.MethodParameter;
 import org.springframework.security.core.Authentication;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
-import readingList.utils.Reader;
+import readinglist.utils.Reader;
 
 @Component
 public class ReaderHandlerMethodArgumentResolver implements HandlerMethodArgumentResolver {

@@ -4,7 +4,8 @@ error:
 
 amazon:
   associateId: habuma-20
-
+server:
+  port: 8080
 logging:
   level:
     root: INFO

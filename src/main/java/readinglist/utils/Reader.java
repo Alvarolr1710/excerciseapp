@@ -1,4 +1,4 @@
-package readingList.utils;
+package readinglist.utils;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

@@ -1,12 +1,12 @@
-package readingList.config;
+package readinglist.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
-import readingList.repository.ReaderRepository;
-import readingList.utils.Reader;
+import readinglist.repository.ReaderRepository;
+import readinglist.utils.Reader;
 
 public class UserDetailsServiceImp implements UserDetailsService {
 
