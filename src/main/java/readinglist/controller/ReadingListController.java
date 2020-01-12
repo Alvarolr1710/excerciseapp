@@ -1,5 +1,6 @@
 package readinglist.controller;
 
+import io.micrometer.core.instrument.MeterRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Controller;
@@ -23,6 +24,8 @@ public class ReadingListController {
     private ReadingListRepository readingListRepository;
     @Autowired
     private AmazonProperties amazonProperties;
+    @Autowired
+    private MeterRegistry meterRegistry;
 
     @RequestMapping(method = RequestMethod.GET)
     public String readersBooks(Reader reader, Model model) {
@@ -39,6 +42,7 @@ public class ReadingListController {
     public String addToReadingList(Reader reader, Book book) {
         book.setReader(reader);
         readingListRepository.save(book);
+        meterRegistry.counter("books.saved").increment();
         return "redirect:/";
     }
 

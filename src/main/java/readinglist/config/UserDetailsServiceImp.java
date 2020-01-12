@@ -8,6 +8,8 @@ import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import readinglist.repository.ReaderRepository;
 import readinglist.utils.Reader;
 
+import static org.springframework.security.crypto.factory.PasswordEncoderFactories.*;
+
 public class UserDetailsServiceImp implements UserDetailsService {
 
     @Autowired
@@ -19,7 +21,7 @@ public class UserDetailsServiceImp implements UserDetailsService {
         if (reader == null) {
             throw new UsernameNotFoundException(username);
         }
-        reader.setPassword(PasswordEncoderFactories.createDelegatingPasswordEncoder().encode(reader.getPassword()));
+        reader.setPassword(createDelegatingPasswordEncoder().encode(reader.getPassword()));
         return reader;
     }
 }

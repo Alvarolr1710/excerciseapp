@@ -7,7 +7,10 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import readinglist.repository.ReaderRepository;
+
+import static org.springframework.security.crypto.factory.PasswordEncoderFactories.createDelegatingPasswordEncoder;
 
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -15,6 +18,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private ReaderRepository readerRepository;
 
+    @Bean
+    public UserDetailsService userDetailsService() {
+        return new UserDetailsServiceImp();
+    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -22,6 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/").access("hasRole('ROLE_READER')")
                 .antMatchers("/**").permitAll()
+                .antMatchers("/shutdown").access("hasRole('ADMIN')")
                 .and()
                 .formLogin()
                 .loginPage("/login")
@@ -33,11 +41,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(
             AuthenticationManagerBuilder auth) throws Exception {
         auth
-                .userDetailsService(userDetailsService());
-    }
-
-    @Bean
-    public UserDetailsService userDetailsService() {
-        return new UserDetailsServiceImp();
+                .userDetailsService(userDetailsService())
+                .and().inMemoryAuthentication()
+                .withUser("admin").password(createDelegatingPasswordEncoder().encode("admin"))
+                .roles("ADMIN", "READER");
     }
 }
